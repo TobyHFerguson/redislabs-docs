@@ -61,8 +61,8 @@ To create a cluster:
         section **IP Addresses Usage** is shown. Use the **IP
         Addresses Usage** section to assign a single IPv4 type address
         for internal traffic and multiple IPv4/IPv6 type addresses for
-        external traffic. For additional details, refer to Multi-IP &
-        IPv6.
+        external traffic. For additional details, refer to [Multi-IP &
+IPv6]({{< relref "/rs/administering/designing-production/networking/multi-ip-ipv6.md" >}})
 
     1. In Cluster configuration, select **Create new cluster**.
 
@@ -72,7 +72,7 @@ To create a cluster:
         name]({{< relref "/rs/installing-upgrading/configuring/cluster-name-dns-connection-management/_index.md" >}}).
 
     1. Choose whether to **Enable private & public endpoints support**.
-        For additional details, refer to Private & Public Endpoints.
+        For additional details, refer to [Private & Public Endpoints]({{< relref "/rs/administering/designing-production/networking/private-public-endpoints.md" >}}).
 
     1. Choose whether to **Enable rack-zone awareness**. Enabling
         rack-zone awareness requires setting the **Rack-zone ID** for
