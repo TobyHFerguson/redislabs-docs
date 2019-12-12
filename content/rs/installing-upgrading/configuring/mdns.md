@@ -14,7 +14,7 @@ If you choose to use the mDNS protocol when setting the cluster name
 name]({{< relref "/rs/installing-upgrading/configuring/cluster-name-dns-connection-management/_index.md" >}}),
 make sure that the configurations and prerequisites, which are required for
 resolving databases' endpoints, are met. These configurations and
-perquisites are needed on the client machines, as well as on the
+prerequisites are needed on the client machines, as well as on the
 machines you are using as Redis Enterprise Software (RS) nodes if you
 are using the [Replica
 of]({{< relref "/rs/administering/active-passive.md" >}})
