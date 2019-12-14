@@ -30,7 +30,8 @@ update your firewall with the port for that new database endpoint.
 | TCP | 9443 (Recommended), [8080](#turning-off-http-support) | REST API traffic, including cluster management and node bootstrap |
 | TCP | 10000-19999 | Database traffic |
 | TCP | 20000-29999 | Database shards traffic (Internal use) |
-| UDP | 53, 5353 | DNS/mDNS traffic (Internal use) |
+| UDP | 53 | DNS |
+| UDP | 5353 | DNS/mDNS traffic (Internal use) |
 
 ## Changing the Management Web UI Port
 
