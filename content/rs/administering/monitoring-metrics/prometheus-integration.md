@@ -98,15 +98,16 @@ To get started with custom monitoring:
 
         ![data-sources](/images/rs/data-sources.png?width=300)
 
-    1. Add a new data source with:
+    1. Add a new `Prometheus` data source and configure it thus:
 
         - Name: `redis-enterprise`
-        - Type: `Prometheus`
+        - Default: (ensure the slider is red - i.e. this data source is the default)
         - URL: `http://<your prometheus address>:9090`
-        - Access: `Server`
+        
+        
 
     NOTES:
-
+    - <your prometheus address> will be simply `prometheus` if you've used the _docker_compose.yml_ file described above. Note that this name must be resolvable from the Grafana server, which means your investigation of any resolution issues must take the networking between the Grafana and Prometheus servers into account.
     - If the network port is not accessible to the Grafana server,
     select the 'Browser' option from the Access menu.
     - In a testing environment, you can select 'Skip TLS verification'.
@@ -114,11 +115,12 @@ To get started with custom monitoring:
     ![prometheus-connection](/images/rs/prometheus-connection.png?width=500)
 
 1. Add dashboards for cluster, node, and database metrics.
-    To add preconfigured dashboards:
+    To add preconfigured dashboards, for each dashboard you want to import, do the following:
     1. In the Grafana dashboards menu, select **Manage**.
     1. Click **Import**.
     1. Copy one of the configurations into the **Paste JSON** field.
         {{%expand "database.json" %}}
+    1. Click the **Load** button
 
 ```json
 {{% embed-code "/rs/database.json" %}}
@@ -139,7 +141,8 @@ To get started with custom monitoring:
 ```
 
         {{% /expand%}}
-    1. In the Import options, select the `redis-enterprise` datasource and click **Import**.
+
+To view the Dashboards click on `Home` and then select one of the dashboards listed.
 
 The dashboards that you create from the configurations are sample dashboards.
 For more information about configuring dashboards, see the [Grafana documentation](http://docs.grafana.org).
