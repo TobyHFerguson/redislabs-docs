@@ -33,7 +33,7 @@ Before configuring a CRDB, you must:
 
     CRDBs are not compatible with the [Discovery Service]({{< relref "/rs/concepts/data-access/discovery-service.md" >}}) for inter-cluster communications,
     but are compatible with local application connections.
-- Configure the network so that all nodes in each cluster can connect to the proxy port and the cluster admin port (9443) of each cluster.
+- Configure the network so that all nodes in each cluster can connect to the endpoint ports (10000-19999) and the cluster admin port (9443) of each cluster. (For enhanced security you limit the endpoint ports to only those for the databases that you have created.)
 - Confirm that a [network time service](#network-time-service-ntp-or-chrony) is configured and running on each node in all clusters.
 
 ## CRDB Current Limitations
